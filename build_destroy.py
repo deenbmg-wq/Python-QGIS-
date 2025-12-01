@@ -1,4 +1,4 @@
-# モンテカルロ法で、全壊率に基づき建物の全壊シミュレーションを行う。建物高さ、階層から、周囲への影響範囲を指定して建物にバッファを発生させる。
+# 全壊率に基づき建物の全壊シミュレーションを行う。建物高さ、階層から、周囲への影響範囲を指定して建物にバッファを発生させる。
 import geopandas as gpd
 import random
 
@@ -33,3 +33,4 @@ for idx, row in buildings.iterrows():
 buildings.to_file(output_path, driver="GeoJSON", encoding="utf-8")
 
 print(f"倒壊建物ポリゴンが作成され、元データの属性情報とともに保存されました: {output_path}")
+
